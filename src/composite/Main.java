@@ -25,6 +25,22 @@ public class Main {
 		mcChombo2.addProducto(gaseosa);
 	
 		
+		// creo un nuevo Combo, que contiene otros combos “Súper Mc Chombos”-“Súper Mc Chombo 1” que tiene adentro dos “Mc
+		//Chombos 1”.
+		
+		Combo SuperChombo1= new Combo("Super Mc Chombo 1");
+		SuperChombo1.addProducto(mcChombo1);
+		SuperChombo1.addProducto(mcChombo1);
+		
+		// creo un  “Súper Requete Mc Chombos”,  contienen adentro otros Mc Chombos y Súper Mc Chombos. Por ejemplo, el “Súper Requete Mc
+		// Chombo 1” que tiene adentro un “Mc Chombos 1” y un “Súper Mc Chombo 1”
+		
+		Combo SuperRequeteMcChombo= new Combo ("Super Requete Mc Chombo 1");
+		SuperRequeteMcChombo.addProducto(mcChombo1);
+		SuperRequeteMcChombo.addProducto(SuperChombo1);
+
+		
+		
 		// creo un Ticket
 		
 		Ticket ticket= new Ticket();
@@ -34,11 +50,19 @@ public class Main {
 		ticket.agregarItem(mcChombo1, 1);
 		ticket.agregarItem(mcChombo2, 1);
 		ticket.agregarItem(papas, 2);
+		ticket.agregarItem(SuperChombo1, 1);
+		ticket.agregarItem(SuperRequeteMcChombo, 1);
+		ticket.agregarItem(SuperRequeteMcChombo, 2);
 
+		
+		
 		
 		// imprimo el ticket/factura total
 		
 		ticket.imprimirFactura();
+		
+		
+		
 		
 		
 	
