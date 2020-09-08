@@ -15,7 +15,6 @@ public class Tamagochi {
 	}
 
 
-
 	public void setEstado(State estado) {
 		this.estado = estado;
 		this.estado.setTamagochi(this);
