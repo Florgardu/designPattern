@@ -10,6 +10,5 @@ public class MoldeAuto implements Molde {
 	}
 	
 	
-	
 
 }
